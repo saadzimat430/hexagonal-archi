@@ -1,13 +1,13 @@
-package com.example.demo;
+package com.exalt.it.bank.system;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DemoApplication {
+public class BankSystemApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(DemoApplication.class, args);
+        SpringApplication.run(BankSystemApplication.class, args);
     }
 
 }

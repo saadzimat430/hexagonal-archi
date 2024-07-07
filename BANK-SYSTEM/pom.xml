@@ -11,8 +11,8 @@
     <groupId>com.example</groupId>
     <artifactId>BANK-SYSTEM</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>demo</name>
-    <description>demo</description>
+    <name>Bank System</name>
+    <description>Ce projet est une simple application des systèmes bancaire</description>
     <url/>
     <licenses>
         <license/>

@@ -1,0 +1,1 @@
+## rajouter une doc pour la conception technique et fonctionelles de l'application.
