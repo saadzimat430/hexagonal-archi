@@ -1,6 +1,7 @@
 package com.exalt.it.bank.system.service;
 
 
+import com.exalt.it.bank.system.config.BaseTest;
 import com.exalt.it.bank.system.domain.enums.TypeCompte;
 import com.exalt.it.bank.system.domain.exceptions.CompteNoFound;
 import com.exalt.it.bank.system.domain.exceptions.OperationUnothorized;
@@ -23,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertThrowsExactly;
 @ActiveProfiles(profiles = "test")
 @SpringBootTest
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class CompteServiceTest {
+public class CompteServiceTest extends BaseTest {
     @Autowired
     private CompteService compteService;
 

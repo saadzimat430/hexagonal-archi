@@ -91,6 +91,29 @@ Ce relevé devra faire apparaître :
 
 ![archi-hexa](./assets/hexa-schema.png)
 
+# 🚀 **Getting Started** 🚀
+
+## Prerequisites
+- Java 11 or higher
+- Maven 3.6.3 or higher
+- Docker and Docker Compose
+
+## How to Start the Project
+
+1. Build the project:
+   Run one of the following commands in the root directory of the project:
+   `mvn clean package`
+   or
+   `mvn clean install`
+
+2. Start the application:
+   it would be usefull if you have a docker desktop installed on your machine.
+   After building the project, navigate to the `docker` folder and run:
+   `docker-compose up -d --build`
+
+
+
+
 
  
 
