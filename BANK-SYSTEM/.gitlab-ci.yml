@@ -1,0 +1,19 @@
+stages:
+  - build
+
+
+variables:
+  MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository"
+
+cache:
+  paths:
+    - .m2/repository
+
+build:
+  stage: build
+  image: maven:3.8.4-openjdk-17
+  script:
+    - mvn clean package
+  artifacts:
+    paths:
+      - target/*.jar
