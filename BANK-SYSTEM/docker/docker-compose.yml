@@ -1,26 +1,29 @@
 version: '3.8'
+
 services:
   app:
-    image: 'newbanksystem:latest'
     build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: app
+      context: ../
+      dockerfile: docker/Dockerfile
+    ports:
+      - "8080:8080"
     depends_on:
       - db
     environment:
-      - SPRING_DATASOURCE_URL:jdbc:sqlserver://db:1433;databaseName=banksystem
-      - SPRING_DATASOURCE_USERNAME:banksystem
-      - SPRING_DATASOURCE_PASSWORD:bankSystem1-@
+      - JDBC_URL=jdbc:postgresql://db:5432/myapp
+      - DB_USER=myuser
+      - DB_PASSWORD=mypassword
 
-    ports:
-      - 8080:8080
   db:
-    build: .
-    image: mcmoe/mssqldocker
-    environment:
-      ACCEPT_EULA: Y
-      SA_PASSWORD: bankSystem1-@
+    image: postgres:13
     ports:
-      - "1433:1433"
-    container_name: mssqldev
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=myapp
+      - POSTGRES_USER=myuser
+      - POSTGRES_PASSWORD=mypassword
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
