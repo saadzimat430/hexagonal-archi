@@ -105,10 +105,15 @@ Ce relevé devra faire apparaître :
    `mvn clean package`
    or
    `mvn clean install`
+   Or just run wrapper:
+   `./mvnw clean install` <!--(windows users should run `mvnw.cmd` instead of `./mvnw`) -->
 
-2. Start the application:
-   it would be very usefull if you have a docker desktop installed on your machine.
-   After building the project, navigate to the `docker` folder and run:
+Ps: it would be very usefull if you have a docker desktop installed on your machine.
+
+1. Generate the docker image (two stage build is implemented) :
+   After building the project, navigate to the root folder and run:
+   `docker build -t bank .`  <!-- you can name your image however you want, I named it bank -->
+2. Run the docker container:
    `docker-compose up -d --build`
 
 
