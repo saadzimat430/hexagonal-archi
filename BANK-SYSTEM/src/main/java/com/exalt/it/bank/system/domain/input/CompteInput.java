@@ -1,4 +1,4 @@
-package com.exalt.it.bank.system.application.port.input;
+package com.exalt.it.bank.system.domain.input;
 
 import com.exalt.it.bank.system.domain.model.Compte;
 import com.exalt.it.bank.system.domain.model.ReleveBancaire;

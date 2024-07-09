@@ -1,6 +1,6 @@
 package com.exalt.it.bank.system.domain.service;
 
-import com.exalt.it.bank.system.application.port.input.CompteInput;
+import com.exalt.it.bank.system.domain.input.CompteInput;
 import com.exalt.it.bank.system.application.port.out.CompteOutput;
 import com.exalt.it.bank.system.domain.enums.TypeCompte;
 import com.exalt.it.bank.system.domain.enums.TypeOperation;

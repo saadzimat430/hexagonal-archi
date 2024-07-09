@@ -1,6 +1,6 @@
 package com.exalt.it.bank.system.infrastructure.adapter.input.rest.controller;
 
-import com.exalt.it.bank.system.application.port.input.CompteInput;
+import com.exalt.it.bank.system.domain.input.CompteInput;
 import com.exalt.it.bank.system.domain.model.Compte;
 import com.exalt.it.bank.system.infrastructure.adapter.input.rest.data.response.CompteReponse;
 import com.exalt.it.bank.system.infrastructure.adapter.input.rest.mapper.CompteRestMapper;

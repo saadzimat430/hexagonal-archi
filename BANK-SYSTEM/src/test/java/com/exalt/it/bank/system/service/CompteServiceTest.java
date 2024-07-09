@@ -197,5 +197,14 @@ public class CompteServiceTest extends BaseTest {
 
 
     }
+    @Order(12)
+    @Test
+    public void checkNegativeDepositIsNotPermitted() {
+
+        Compte compte = TestUtils.getMockCompteToAdd();
+        Compte response = compteService.createCompte(compte);
+        OperationUnothorized ex = assertThrowsExactly(OperationUnothorized.class, () -> compteService.depotArgent(BigDecimal.valueOf(-100), response.getId()));
+        assertThat(ex.getMessage()).isEqualTo("Operation non autorisée !");
+    }
 
 }

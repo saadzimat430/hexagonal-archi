@@ -25,6 +25,10 @@ public class Compte {
     }
 
     public boolean depotArgent(BigDecimal argent) {
+        // on ne peut pas déposer un montant négatif
+        if (argent.compareTo(BigDecimal.ZERO) <= 0) {
+            return false;
+        }
         solde = solde.add(argent);
         return true;
     }
