@@ -107,7 +107,7 @@ Ce relevé devra faire apparaître :
    `mvn clean install`
 
 2. Start the application:
-   it would be usefull if you have a docker desktop installed on your machine.
+   it would be very usefull if you have a docker desktop installed on your machine.
    After building the project, navigate to the `docker` folder and run:
    `docker-compose up -d --build`
 
