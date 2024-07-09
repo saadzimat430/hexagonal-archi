@@ -24,7 +24,7 @@ public interface TestUtils {
     String GET_COMPTE_URL = "/comptes/";
     String POST_COMPTE_URL = "/comptes";
     String POST_LIVRET_URL = "/comptes/livret";
-    String POST_DECOUVERT_URL = "/comptes/{compteId}/decouvert";
+    String PUT_DECOUVERT_URL = "/comptes/{compteId}/decouvert";
     String DELETE_COMPTE = "/comptes/{compteId}";
     String RELEVE_BANCAIRE_URL = "/comptes/{compteId}/releve";
     String RETRAIT_ARGENT_URL = "/operations/retrait/{compteId}";

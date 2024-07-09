@@ -17,7 +17,7 @@ public class OperationRestAdapter {
     private final CompteInput compteInput;
     private final CompteRestMapper compteRestMapper = new CompteRestMapper();
 
-    @PostMapping("/retrait/{compteId}")
+    @PutMapping("/retrait/{compteId}")
     public CompteReponse retraitArgent(@PathVariable Long compteId, @RequestParam("argent") BigDecimal argent) {
 
         Compte compte = compteInput.retraitArgent(argent, compteId);
@@ -25,7 +25,7 @@ public class OperationRestAdapter {
         return compteRestMapper.toCompteResponse(compte);
     }
 
-    @PostMapping("/depot/{compteId}")
+    @PutMapping("/depot/{compteId}")
     public CompteReponse depotArgent(@PathVariable Long compteId, @RequestParam("argent") BigDecimal argent) {
 
         Compte compte = compteInput.depotArgent(argent, compteId);

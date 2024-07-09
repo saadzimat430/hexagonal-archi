@@ -107,7 +107,7 @@ public class CompteControllerTest {
         when(compteRepository.findById(any())).thenReturn(TestUtils.getMockCompte());
         when(compteRepository.save(any())).thenReturn(TestUtils.getMockCompte().get());
 
-        this.mockMvc.perform(MockMvcRequestBuilders.post(TestUtils.POST_DECOUVERT_URL, "1")
+        this.mockMvc.perform(MockMvcRequestBuilders.put(TestUtils.PUT_DECOUVERT_URL, "1")
                         .param("plafondDecouvert", "300")
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(MockMvcResultMatchers.status().isOk())
@@ -123,7 +123,7 @@ public class CompteControllerTest {
         when(compteRepository.findById(any())).thenReturn(TestUtils.getMockCompte());
         when(compteRepository.save(any())).thenReturn(TestUtils.getMockCompte().get());
 
-        this.mockMvc.perform(MockMvcRequestBuilders.post(TestUtils.POST_DECOUVERT_URL, "1")
+        this.mockMvc.perform(MockMvcRequestBuilders.put(TestUtils.PUT_DECOUVERT_URL, "1")
                         .param("plafondDecouvert", "-300")
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(MockMvcResultMatchers.status().isBadRequest())
@@ -140,7 +140,7 @@ public class CompteControllerTest {
         when(compteRepository.findById(any())).thenReturn(Optional.of(compteEntity));
         when(compteRepository.save(any())).thenReturn(TestUtils.getMockCompte().get());
 
-        this.mockMvc.perform(MockMvcRequestBuilders.post(TestUtils.POST_DECOUVERT_URL, "1")
+        this.mockMvc.perform(MockMvcRequestBuilders.put(TestUtils.PUT_DECOUVERT_URL, "1")
                         .param("plafondDecouvert", "300")
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(MockMvcResultMatchers.status().isBadRequest())

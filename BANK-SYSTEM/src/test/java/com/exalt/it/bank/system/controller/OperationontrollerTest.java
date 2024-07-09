@@ -42,7 +42,7 @@ public class OperationontrollerTest {
         when(compteRepository.save(any())).thenReturn(TestUtils.getMockCompte().get());
         when(operationRepository.save(any())).thenReturn(TestUtils.getMockOperation());
 
-        this.mockMvc.perform(MockMvcRequestBuilders.post(TestUtils.RETRAIT_ARGENT_URL, 1L)
+        this.mockMvc.perform(MockMvcRequestBuilders.put(TestUtils.RETRAIT_ARGENT_URL, 1L)
                         .param("argent", "100")
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(MockMvcResultMatchers.status().isOk());
@@ -57,7 +57,7 @@ public class OperationontrollerTest {
         when(compteRepository.save(any())).thenReturn(compteEntity);
         when(operationRepository.save(any())).thenReturn(TestUtils.getMockOperation());
 
-        this.mockMvc.perform(MockMvcRequestBuilders.post(TestUtils.RETRAIT_ARGENT_URL, 1L)
+        this.mockMvc.perform(MockMvcRequestBuilders.put(TestUtils.RETRAIT_ARGENT_URL, 1L)
                         .param("argent", "100")
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(MockMvcResultMatchers.status().isBadRequest())
@@ -70,7 +70,7 @@ public class OperationontrollerTest {
         when(compteRepository.save(any())).thenReturn(TestUtils.getMockCompte().get());
         when(operationRepository.save(any())).thenReturn(TestUtils.getMockOperation());
 
-        this.mockMvc.perform(MockMvcRequestBuilders.post(TestUtils.RETRAIT_ARGENT_URL, 1L)
+        this.mockMvc.perform(MockMvcRequestBuilders.put(TestUtils.RETRAIT_ARGENT_URL, 1L)
                         .param("argent", "1000")
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(MockMvcResultMatchers.status().isBadRequest())
@@ -83,7 +83,7 @@ public class OperationontrollerTest {
         when(compteRepository.save(any())).thenReturn(TestUtils.getMockCompte().get());
         when(operationRepository.save(any())).thenReturn(TestUtils.getMockOperation());
 
-        this.mockMvc.perform(MockMvcRequestBuilders.post(TestUtils.DEPOT_ARGENT_URL, 1L)
+        this.mockMvc.perform(MockMvcRequestBuilders.put(TestUtils.DEPOT_ARGENT_URL, 1L)
                         .param("argent", "1000")
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(MockMvcResultMatchers.status().isOk())
@@ -96,7 +96,7 @@ public class OperationontrollerTest {
         when(compteRepository.save(any())).thenReturn(TestUtils.getMockLivretCompte().get());
         when(operationRepository.save(any())).thenReturn(TestUtils.getMockOperation());
 
-        this.mockMvc.perform(MockMvcRequestBuilders.post(TestUtils.DEPOT_ARGENT_URL, 1L)
+        this.mockMvc.perform(MockMvcRequestBuilders.put(TestUtils.DEPOT_ARGENT_URL, 1L)
                         .param("argent", "1200")
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(MockMvcResultMatchers.status().isBadRequest())

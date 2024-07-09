@@ -78,7 +78,7 @@ public class CompteRestAdapter {
         return compteRestMapper.toReleveBancaireResponse(releveBancaire);
     }
 
-    @PostMapping("/{compteId}/decouvert")
+    @PutMapping("/{compteId}/decouvert")
     public String activerDecouvert(@PathVariable Long compteId, @RequestParam(defaultValue = "0") BigDecimal plafondDecouvert) {
 
         return compteInput.activerDecouvert(compteId, plafondDecouvert);
